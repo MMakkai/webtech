@@ -1,0 +1,47 @@
+body{
+    background-color: saddlebrown;
+}
+a:link{color: red}
+a:visited{color:darkred}
+#everything {
+    margin: auto;
+    width: 100%;
+}
+#banner{
+    height: 160px;
+    background: brown;
+    margin-bottom: 50px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 50px;
+    font-size: 14px;
+    color: gray;
+}
+#menubar{
+    margin-top: 60px;
+    background: brown;
+    float: right;
+    coor: gray;
+}
+
+#menubar .menuButton{
+    width: 150px;
+    background: black;
+    border: 5px solid black;
+    padding: auto;
+    text-align: center;
+    color: white;
+    margin: 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+#content{
+    background-color: gray;
+}
+
+table{
+    border: 2px darkred double;
+    width: 100%;
+    margin-bottom: 10px;
+}
