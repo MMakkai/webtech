@@ -1,0 +1,65 @@
+.menu{
+    width: 100%;
+    background-color: black;
+    border: 5px solid gray;
+    height: 500px;
+    margin-top: 50px;
+}
+html{
+    background-color: black;
+}
+.frontbutton{
+    background-image: url("../image/front.png");
+    background-size: cover;
+}
+.carsbutton{
+    background-image: url("../image/car.jpg");
+    background-size: cover;
+}
+.manfbutton{
+    background-image: url("../image/manuf.jpg");
+    background-size: cover;
+}
+.frontbutton:hover{
+    transform:scale(0.90);
+    transition: transform .25s ease;
+}
+.carsbutton:hover{
+    transform:scale(0.90);
+    transition: transform .25s ease;
+}
+.manfbutton:hover{
+    transform:scale(0.90);
+    transition: transform .25s ease;
+}
+.title{
+    color: white;
+    font-family: "Matura MT Script Capitals";
+    text-align: center;
+    font-size: 80px;
+
+}
+.subtitle{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+.subtitle2{
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 25px;
+}
+.cartable{
+    color: white;
+    font-size: 25px;
+    width: 32%;
+    display:inline-block;
+    border: 10px solid white;
+
+}
+.cartable.firstline{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}

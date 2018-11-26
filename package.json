@@ -1,0 +1,16 @@
+{
+  "name": "webtech2",
+  "version": "0.0.0",
+  "description": "webtech2",
+  "main": "app.js",
+  "author": {
+    "name": "Sátán Ádám"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "fs": "^0.0.1-security"
+  }
+}
