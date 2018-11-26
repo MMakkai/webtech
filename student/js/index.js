@@ -9,5 +9,6 @@ jQuery(document).ready(function () {
     });
     $("#companybutton").click(function () {
         $("#content").load("html/manuf.html");
+        initm();
     });
 });

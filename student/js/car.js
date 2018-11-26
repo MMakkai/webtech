@@ -1,6 +1,6 @@
 var automobiletemplate=`
-<table class="cartable">
-    <tr class="firstline">
+<table class="stufftable" onclick=filter('$(manufacturer)')>
+    <tr>
         <td>$(name)</td>
     </tr>
     <tr>
@@ -23,6 +23,10 @@ var automobiletemplate=`
         <td>Horsepower</td>
         <td>$(horsepower)</td>
     </tr>
+    <tr>
+        <td>Year</td>
+        <td>$(year)</td>
+    </tr>
 `;
 
 function pastetable(template,data){
@@ -38,8 +42,8 @@ function pastetable(template,data){
     return generatedtable;
 }
 function getcars(){
-    $("#cont1").empty();
-    $.get('/cars',function(cardata){
+    jQuery("#cont1").empty();
+    jQuery.get('/cars',function(cardata){
         for(var car of cardata){
             $("#cont1").append(pastetable(automobiletemplate,car));
         }
@@ -47,20 +51,37 @@ function getcars(){
 }
 function init(){
     getcars();
-    $('#carform').submit(function (eh){ //eventhandler
-        eh.preventDefault();
+    jQuery.get('/manufacturerNames', function(names){
+        jQuery('#manufacturerSelector').empty();
+        for(var man of names){
+            jQuery('#manufacturerSelector').append('<option>'+man+'</option>')
+        }
+    });
+    jQuery('#carform').submit(function (e){ //eventhandler
+        e.preventDefault();
         $.ajax({
             url:'/addCar',
             type:'post',
-            data:$('#carForm').serialize(),
+            data:$('#carform').serialize(),
             success:function () {
-                $("input[type=text],textarea").val("");
-                $("input[type=number],textarea").val("");
-                refreshCars();
+                alert("Car added.")
             },
-            error: function (e) {
+            error: function () {
                 alert("Car exists already.")
             }
         })
+})
+}
+function filter(MaN){
+    document.cookie="name="+MaN;
+    jQuery.ajax({
+        url:'/manufacturer',
+        type:'get',
+        success:function(cars){
+            jQuery('#cont1').empty();
+            for(var auto of cars){
+                jQuery('#cont1').append(pastetable(automobiletemplate,auto));
+            }
+        }
     })
 }

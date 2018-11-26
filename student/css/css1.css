@@ -23,14 +23,17 @@ html{
 .frontbutton:hover{
     transform:scale(0.90);
     transition: transform .25s ease;
+    cursor: pointer;
 }
 .carsbutton:hover{
     transform:scale(0.90);
     transition: transform .25s ease;
+    cursor: pointer;
 }
 .manfbutton:hover{
     transform:scale(0.90);
     transition: transform .25s ease;
+    cursor: pointer;
 }
 .title{
     color: white;
@@ -50,7 +53,7 @@ html{
     padding-top: 30px;
     font-size: 25px;
 }
-.cartable{
+.stufftable{
     color: white;
     font-size: 25px;
     width: 32%;
@@ -61,5 +64,9 @@ html{
 .cartable.firstline{
     color: white;
     text-align: center;
+    font-size: 30px;
+}
+.form{
+    color: white;
     font-size: 30px;
 }
