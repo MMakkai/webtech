@@ -64,6 +64,7 @@ function init(){
             type:'post',
             data:$('#carform').serialize(),
             success:function () {
+                init();
                 alert("Car added.")
             },
             error: function () {
